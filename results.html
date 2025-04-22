@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Results</h1>
+        <p id="result-text"></p>
+        <a href="index.html">Back to Start</a>
+    </div>
+
+    <script>
+    const params = new URLSearchParams(window.location.search);
+    const score = params.get("score");
+    const total = params.get("total");
+
+    document.getElementById("result-text").innerText = `You scored ${score} out of ${total}!`;
+    </script>
+</body>
+</html>

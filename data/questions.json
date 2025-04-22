@@ -1,0 +1,34 @@
+[
+    {
+        "type": "multiple",
+        "question": "Which of the following is a strong password?",
+        "options": [ "12345678", "password123", "P@ssw0rd!2024", "abcdefg" ],
+        "answer": "P@ssw0rd!2024"
+    },
+    {
+        "type": "multiple",
+        "question": "What should you do if you receive a suspicious email asking for your login details?",
+        "options": [
+            "Click the link and log in",
+            "Ignore it",
+            "Report it to your IT department",
+            "Reply asking if it's real"
+        ],
+        "answer": "Report it to your IT department"
+    },
+    {
+        "type": "text",
+        "question": "Name one common sign of a phishing email.",
+        "answer": [ "suspicious link", "misspellings", "unknown sender", "urgent request" ]
+    },
+    {
+        "type": "drag",
+        "question": "Match the term to its definition",
+        "pairs": {
+            "Phishing": "Fake messages to steal your info",
+            "VPN": "Encrypts your internet connection",
+            "Two-Factor Auth": "Extra login step for security"
+        }
+    }
+]
+    
