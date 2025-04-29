@@ -1,56 +1,131 @@
+:root {
+    --bg: #0e141b;
+    --card: #1c1f26;
+    --accent: #22c55e;
+    --text: #f4f4f4;
+    --muted: #9ca3af;
+    --border: #2e343d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
+    margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: #f9f9f9;
+    background-color: var(--bg);
+    color: var(--text);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    min-height: 100vh;
 }
 
 .container {
-    max-width: 600px;
-    padding: 20px;
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    background-color: var(--card);
+    padding: 40px;
+    max-width: 800px;
+    width: 95%;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
     text-align: center;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+h1, h2, p {
+    margin-bottom: 20px;
 }
 
 button {
-    margin-top: 10px;
-    padding: 10px 20px;
+    background: var(--card);
+    color: var(--text);
+    border: 2px solid var(--border);
+    padding: 14px 20px;
+    margin: 10px;
+    border-radius: 14px;
     font-size: 1rem;
-    border: none;
-    border-radius: 8px;
-    background-color: #1e88e5;
-    color: white;
+    width: 100%;
+    max-width: 250px;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
 
     button:hover {
-        background-color: #1565c0;
+        background: var(--border);
+        border-color: var(--accent);
+        color: var(--accent);
     }
 
+input[type="text"] {
+    width: 90%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    margin: 15px 0;
+    background: #15191f;
+    color: white;
+    font-size: 1rem;
+}
+
+#feedback {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--accent);
+    min-height: 24px;
+}
 
 .drag-drop, .drop-area {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
     margin-top: 20px;
 }
 
 .drag-item, .drop-box {
-    padding: 10px;
-    margin: 10px;
-    border-radius: 8px;
-    background-color: #e3f2fd;
-    min-width: 120px;
+    background-color: #1f2937;
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: 2px dashed #3b82f6;
+    color: white;
+    min-width: 140px;
     text-align: center;
     cursor: grab;
-    border: 2px dashed #90caf9;
 }
+
+    .drag-item:hover {
+        background-color: #2563eb;
+    }
 
 .drop-box {
     min-height: 50px;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #374151;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 10px;
+    margin-bottom: 20px;
+}
+
+.progress-bar-inner {
+    height: 100%;
+    width: 0%;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

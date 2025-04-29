@@ -127,6 +127,8 @@ function showQuestion() {
         answersEl.appendChild(checkBtn);
     }
 }
+document.getElementById("progress").style.width =
+    `${(currentQuestion / questions.length) * 100}%`;
 
 
 function nextQuestion() {
